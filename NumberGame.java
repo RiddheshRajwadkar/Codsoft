@@ -11,7 +11,7 @@ public class NumberGame{
         int maxNumber = 100;
         int minNumber = 1;
         int attemptLimit = 10;
-        int points = 0;
+        int points = 10;
 
         String play = "y";
 
@@ -32,18 +32,20 @@ public class NumberGame{
                 }
 
                 if(guess == randomNo){
-                    System.out.print("Congrats you have guessed the correct number in " + attemptNo +" attempts. You have " + points + "points.");
-                    points++;
+                    System.out.println("Congrats you have guessed the correct number in " + attemptNo +" attempts. You have " + (points-1) + " points.");
+                    points--;
                     break;
                 } else if(guess < randomNo){
-                    System.out.print("Guess too low. Try again.");
+                    System.out.print("Guessed too low. Try again.");
+                    points--;
                 } else{
-                    System.out.print("Guess too high. Try again.");
+                    System.out.print("Guessed too high. Try again.");
+                    points--;
                 }
             }
 
             if(attemptNo == attemptLimit){
-                System.out.print("Sorry you ran out of attempts. " + randomNo + " attempts");
+                System.out.print("Sorry you ran out of attempts.");
             }
 
             points++;
@@ -54,7 +56,6 @@ public class NumberGame{
                 break;
             }
         }
-        System.out.print("GameOver, You have " + points +" points.");
+        System.out.print("GameOver, You have " + (points-1) +" points.");
     }
-
 }
