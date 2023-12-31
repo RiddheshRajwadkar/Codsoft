@@ -32,7 +32,7 @@ public class NumberGame{
                 }
 
                 if(guess == randomNo){
-                    System.out.println("Congrats you have guessed the correct number in " + attemptNo +" attempts. You have " + (points-1) + " points.");
+                    System.out.println("Congrats you have guessed the correct number in " + attemptNo +" attempts. You have " + points + " points.");
                     points--;
                     break;
                 } else if(guess < randomNo){
@@ -48,14 +48,14 @@ public class NumberGame{
                 System.out.print("Sorry you ran out of attempts.");
             }
 
-            points++;
             System.out.print("Do you want to play again? (y/n): ");
+            attemptNo = 0;
             play = scanner.next();
 
             if(!play.equalsIgnoreCase("y")){
                 break;
             }
         }
-        System.out.print("GameOver, You have " + (points-1) +" points.");
+        System.out.print("GameOver, You have " + points +" points.");
     }
 }
