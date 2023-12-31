@@ -2,13 +2,14 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class NumberGuessingGame{
+public class NumberGame{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
         int maxNumber = 100;
+        int minNumber = 1;
         int attemptLimit = 10;
         int points = 0;
 
@@ -25,7 +26,7 @@ public class NumberGuessingGame{
                 int guess = scanner.nextInt();
                 attemptNo++;
 
-                if(guess > maxNumber){
+                if(guess > maxNumber || guess < minNumber){
                     System.err.println("Please enter a guess between 1 and 100 only.");
                     break;
                 }
