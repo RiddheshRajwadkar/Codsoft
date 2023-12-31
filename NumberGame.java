@@ -35,10 +35,10 @@ public class NumberGame{
                     System.out.println("Congrats you have guessed the correct number in " + attemptNo +" attempts. You have " + points + " points.");
                     break;
                 } else if(guess < randomNo){
-                    System.out.print("Guessed too low. Try again.");
+                    System.out.print("Guessed too low. Try again higher.");
                     points--;
                 } else{
-                    System.out.print("Guessed too high. Try again.");
+                    System.out.print("Guessed too high. Try again lower.");
                     points--;
                 }
             }
