@@ -33,7 +33,6 @@ public class NumberGame{
 
                 if(guess == randomNo){
                     System.out.println("Congrats you have guessed the correct number in " + attemptNo +" attempts. You have " + points + " points.");
-                    points--;
                     break;
                 } else if(guess < randomNo){
                     System.out.print("Guessed too low. Try again.");
