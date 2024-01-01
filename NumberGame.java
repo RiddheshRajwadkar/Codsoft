@@ -56,5 +56,6 @@ public class NumberGame{
             }
         }
         System.out.print("GameOver, You have " + points +" points.");
+        scanner.close();
     }
 }
